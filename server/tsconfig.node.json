@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es2018", // Or another suitable Node.js version
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true,
+      "outDir": "./dist" // Specify your output directory
+    },
+    "include": [
+      "./**/*.ts" // Include all TypeScript files in the server folder
+    ]
+  }

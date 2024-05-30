@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "957d5893-109f-4535-9866-04ae97009cc7",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14598933"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullname\": \"{{$randomFullName}}\",\n    \"email\":\"{{$randomEmail}}\" ,\n    \"password\":\"123456789\",\n    \"comfirm\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/user/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"user",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"Liam51@hotmail.com\" ,\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/user/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"user",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create board",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \n    \"title\":\"{{$randomCountry}}\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/board",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"board"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create column",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \n    \"title\":\"{{$randomCountry}}\",\n    \"desc\":\"{{$randomLoremSentences}}\",\n    \"boardID\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/column/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"column",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create column Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \n    \"title\":\"{{$randomCountry}}\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/column",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"column"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \n    \"title\":\"{{$randomCountry}}\",\n    \"desc\":\"{{$randomLoremSentences}}\",\n    \"columnID\":1,\n    \"boardID\":2,\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/card/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"card",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my board",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"Liam51@hotmail.com\" ,\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/board/myboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"board",
+						"myboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get board by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"Liam51@hotmail.com\" ,\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/board/board/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"board",
+						"board",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete board",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"Liam51@hotmail.com\" ,\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/board/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"board",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create column Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwNSwiaWF0IjoxNzE1NjUyNDQwLCJleHAiOjE3MTYyNTcyNDB9.2XlNoC2EeEx6bv0NTOu1p5PBLnTJVldiSuIqUYF6BEI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "0cbbafba-1028-11ef-8bfa-8a2dda8ec551"
+					},
+					{
+						"key": "shop_id",
+						"value": "192269"
+					},
+					{
+						"key": "to_ward_code",
+						"value": "800112"
+					},
+					{
+						"key": "to_district_id",
+						"value": "1936"
+					},
+					{
+						"key": "weight",
+						"value": "2000",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \n    \"title\":\"{{$randomCountry}}\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/api/board",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"board"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
