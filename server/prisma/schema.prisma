@@ -45,4 +45,11 @@ model Card {
   boardID      Int
   duedate      DateTime @default(now())
   reminderdate DateTime @default(now())
+  Comment      Comment[]
+}
+model Comment {
+  id      Int    @id @default(autoincrement())
+  desc    String
+  card    Card  @relation(fields: [CardID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  CardID  Int
 }
