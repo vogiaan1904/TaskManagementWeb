@@ -40,5 +40,5 @@ My Trello App is a Trello-like application built with a modern web stack. It all
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/your-username/my-trello-app.git
+git clone https://github.com/vogiaan1904/my-trello-app.git
 cd my-trello-app
