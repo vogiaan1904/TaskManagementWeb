@@ -61,7 +61,7 @@ TOKEN_SECRET=your-jwt-secret
 cd server
 npx prisma migrate dev
 ```
-###Running the Application
+### Running the Application
 1. Start the backend server:
 ```
 cd server
@@ -74,6 +74,6 @@ npm run dev
 ```
 3. Open your browser and navigate to http://localhost:3000.
 
-###License
+## License
 This project is licensed under the MIT License.
 
