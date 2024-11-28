@@ -42,3 +42,38 @@ My Trello App is a Trello-like application built with a modern web stack. It all
 ```sh
 git clone https://github.com/vogiaan1904/my-trello-app.git
 cd my-trello-app
+```
+2. Install dependencies for both frontend and backend:
+```
+cd my-trello-app
+npm install
+cd ../server
+npm install
+```
+3. Set up environment variables:
+   Create a .env file in the server directory and add the following:
+```
+DATABASE_URL=your-database-url
+TOKEN_SECRET=your-jwt-secret
+```
+4. Run database migrations:
+```
+cd server
+npx prisma migrate dev
+```
+###Running the Application
+1. Start the backend server:
+```
+cd server
+npm run dev
+```
+2. Start the frontend development server:
+```
+cd my-trello-app
+npm run dev
+```
+3. Open your browser and navigate to http://localhost:3000.
+
+###License
+This project is licensed under the MIT License.
+
